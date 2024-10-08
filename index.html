@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Book Library</h1>
+      </header>
+      <form type="submit">
+        <div class="form-input-wrapper">
+          <label> Title
+            <input type="text" name="book-title" required />
+          </label>
+          <label> Author
+            <input type="text" name="book-author" required />
+          </label>
+          <label>Year
+            <input type="text" name="book-year" required />
+          </label>
+          <label> Genre
+            <input type="text" name="book-genre" required />
+          </label>
+        </div>
+        <button type="submit">Add</button>
+      </form>
+      <section class="book-container">
+        <h4 class="card-title">title</h4>
+        <p class="card-author">author</p>
+        <p class="card-year">year</p>
+        <p class="card-genre">Genre</p>
+      </section>
+    </main>
+  </body>
+</html>
