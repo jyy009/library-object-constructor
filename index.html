@@ -12,36 +12,37 @@
       <header>
         <h1>Book Library</h1>
       </header>
-      <form type="submit">
-        <div class="form-input-wrapper">
-          <label>
-            Title
-            <input type="text" name="book-title" required />
-          </label>
-          <label>
-            Author
-            <input type="text" name="book-author" required />
-          </label>
-          <label
-            >Year
-            <input type="text" name="book-year" required />
-          </label>
-          <label>
-            Genre
-            <input type="text" name="book-genre" required />
-          </label>
-        </div>
-        <button type="submit">Add</button>
-      </form>
+
+      
+      <div>
+        <button class="show-dialog-button">Add Book</button>
+      </div>
+      <dialog class="book-dialog">
+        <form type="submit" class="book-form">
+          <div class="form-input-wrapper">
+            <label>
+              Title
+              <input type="text" name="book-title"  />
+            </label>
+            <label>
+              Author
+              <input type="text" name="book-author"  />
+            </label>
+            <label
+              >Year
+              <input type="text" name="book-year"  />
+            </label>
+            <label>
+              Genre
+              <input type="text" name="book-genre"  />
+            </label>
+          </div>
+          <button type="button" formmethod="dialog" class="close-button">Close</button>
+          <button type="submit" class="submit-button">Add</button>
+        </form>
+      </dialog>
 
       <section class="book-container">
-
-        <!-- <div class="book-card">
-          <h4 class="card-title">title</h4>
-          <p class="card-author">author</p>
-          <p class="card-year">year</p>
-          <p class="card-genre">Genre</p>
-        </div> -->
 
       </section>
     </main>

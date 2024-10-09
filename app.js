@@ -1,9 +1,9 @@
 const bookContainer = document.querySelector(".book-container");
-// const cardTitle = document.querySelector(".card-title");
-// const cardAuthor = document.querySelector(".card-author");
-// const cardYear = document.querySelector(".card-year");
-// const cardGenre = document.querySelector(".card-genre");
-// const bookCard = document.querySelector(".book-card");
+const showButton = document.querySelector(".show-dialog-button");
+const closeButton = document.querySelector(".close-button");
+const bookDialog = document.querySelector(".book-dialog");
+const submitButton = document.querySelector(".submit-button");
+const bookForm = document.querySelector(".book-form");
 
 const bookLibrary = [
   {
@@ -31,36 +31,66 @@ const addBookToLibrary = (title, author, year, genre) => {
   const newBook = new Book(title, author, year, genre);
   bookLibrary.push(newBook);
   console.log(bookLibrary);
+
+
 };
 
-addBookToLibrary();
 
 const displayBooks = (bookArray) => {
   bookContainer.innerHTML = "";
 
   bookArray.forEach((book) => {
     const bookCard = document.createElement("div");
-    bookCard.classList.toggle("book-card");
+    bookCard.classList.add("book-card");
 
     const cardTitle = document.createElement("h4");
-    cardTitle.classList.toggle("card-title");
+    cardTitle.classList.add("card-title");
     cardTitle.textContent = book.title;
     bookCard.appendChild(cardTitle);
 
     const cardAuthor = document.createElement("p");
-    cardAuthor.classList.toggle("card-author");
+    cardAuthor.classList.add("card-author");
     cardAuthor.textContent = book.author;
+    bookCard.appendChild(cardAuthor)
 
     const cardYear = document.createElement("p");
-    cardYear.classList.toggle("card-year");
+    cardYear.classList.add("card-year");
     cardYear.textContent = book.year;
+    bookCard.appendChild(cardYear)
 
     const cardGenre = document.createElement("p");
-    cardGenre.classList.toggle("card-genre");
+    cardGenre.classList.add("card-genre");
     cardGenre.textContent = book.genre;
+    bookCard.appendChild(cardGenre)
+
 
     bookContainer.appendChild(bookCard);
   });
 };
+
+showButton.addEventListener("click", () => {
+  bookDialog.showModal()
+})
+
+closeButton.addEventListener("click", () => {
+  bookDialog.close()
+  bookForm.reset()
+
+})
+
+bookForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const title = bookForm.querySelector('input[name="book-title"]').value
+  const author = bookForm.querySelector('input[name="book-author"]').value
+  const year = bookForm.querySelector('input[name="book-year"]').value
+  const genre = bookForm.querySelector('input[name="book-genre"]').value
+
+  addBookToLibrary(title, author, year, genre)
+  displayBooks(bookLibrary);
+
+  bookForm.reset()
+  bookDialog.close()
+})
 
 displayBooks(bookLibrary);
