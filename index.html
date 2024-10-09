@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" defer></script>
   </head>
   <body>
@@ -13,26 +14,35 @@
       </header>
       <form type="submit">
         <div class="form-input-wrapper">
-          <label> Title
+          <label>
+            Title
             <input type="text" name="book-title" required />
           </label>
-          <label> Author
+          <label>
+            Author
             <input type="text" name="book-author" required />
           </label>
-          <label>Year
+          <label
+            >Year
             <input type="text" name="book-year" required />
           </label>
-          <label> Genre
+          <label>
+            Genre
             <input type="text" name="book-genre" required />
           </label>
         </div>
         <button type="submit">Add</button>
       </form>
+
       <section class="book-container">
-        <h4 class="card-title">title</h4>
-        <p class="card-author">author</p>
-        <p class="card-year">year</p>
-        <p class="card-genre">Genre</p>
+
+        <!-- <div class="book-card">
+          <h4 class="card-title">title</h4>
+          <p class="card-author">author</p>
+          <p class="card-year">year</p>
+          <p class="card-genre">Genre</p>
+        </div> -->
+
       </section>
     </main>
   </body>
