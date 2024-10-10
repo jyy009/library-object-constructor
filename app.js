@@ -52,22 +52,22 @@ const displayBooks = (bookArray) => {
 
     const cardTitle = document.createElement("h4");
     cardTitle.classList.add("card-title");
-    cardTitle.textContent = book.title;
+    cardTitle.textContent = `Title: ${book.title}`
     bookCard.appendChild(cardTitle);
 
     const cardAuthor = document.createElement("p");
     cardAuthor.classList.add("card-author");
-    cardAuthor.textContent = book.author;
+    cardAuthor.textContent = `Author: ${book.author}`;
     bookCard.appendChild(cardAuthor);
 
     const cardYear = document.createElement("p");
     cardYear.classList.add("card-year");
-    cardYear.textContent = book.year;
+    cardYear.textContent = `Year: ${book.year}`;
     bookCard.appendChild(cardYear);
 
     const cardGenre = document.createElement("p");
     cardGenre.classList.add("card-genre");
-    cardGenre.textContent = book.genre;
+    cardGenre.textContent = `Genre: ${book.genre}`;
     bookCard.appendChild(cardGenre);
 
     const removeButton = document.createElement("button");

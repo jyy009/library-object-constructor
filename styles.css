@@ -1,3 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(186, 203, 203);
+  color: black;
+}
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.add-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  background-color: brown;
+  width: 30%;
+  padding: 5px;
+  color: white;
+  margin: 10px 0px;
+}
+
 .book-container {
-  border: solid 1px blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+
+  .book-card {
+    margin: 10px;
+    width: 40%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+  }
 }
